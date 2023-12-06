@@ -1,0 +1,141 @@
+* jsp life cycle
+
+1.trasalation -> jsp to servelet
+2.compilation -> servlet to .class file
+3.loading -> .class file load on server and object is creaated
+4.initialization -> [jspInit] object will initialize
+5.request handling -> _jspsrvice() method or do get() or do post() method will execute and handle the client request
+6.destroy -> jsp will destroy
+
+* Servlet life cycle
+
+1.loading ->  when server is started class will load into memory and servlet object is created (happens only once)
+2.initialization -> servlet object will initilized by invoking init() method (happens only once)
+3.request handling ->  the client request will handle as per request service() method call the methods like doPost() or doGet() (every time new thred will created for handle the client request)
+4.destroy -> when the server will shut down then destroy() method will call and servlet object will delete
+
+* Serialization 
+
+Serialization in Java refers to the process of converting an object's state (its fields and data) into a byte stream, 
+which can be easily stored in a file or transmitted over a network. This byte stream can later be deserialized, converting it back into an object with the same state. 
+Serialization is commonly used for tasks such as object persistence (saving and loading objects), data storage, and inter-process communication.
+In Java, the java.io.Serializable interface is used to indicate that a class can be serialized. When a class implements the Serializable interface, 
+it tells the Java runtime that objects of that class can be converted to a byte stream.
+
+*what is api andd rest api
+
+ api mean application programming interface. it is a one type of messenger who transfer the data from one place to another plave
+ In Java, API stands for Application Programming Interface. An API is a set of rules and tools that allows different software applications to communicate with each other. 
+ It defines the methods and data formats that applications can use to request and exchange information. Java itself provides a vast standard API as part of the Java Development Kit (JDK),
+ and developers often refer to this as the Java API.
+
+* Library and Framework APIs:
+Java developers often work with libraries and frameworks that provide their own APIs. For example, the Spring Framework has its own API for handling dependency injection, 
+AOP (Aspect-Oriented Programming), and more.
+
+* Creating Your Own API:
+When you develop software, you can create your own APIs to define the interactions between different components of your application. 
+This involves creating classes and interfaces that specify how other parts of your program can interact with a particular module or service.
+
+* diff between controller and rest controller
+
+Controller:
+A regular controller in Spring is typically used to handle traditional web requests and responses.
+It is responsible for processing user input, invoking the business logic, and returning an appropriate view as a response.
+Controllers in Spring can handle various types of views, including HTML, XML, JSON, etc.
+They are often associated with the Model-View-Controller (MVC) pattern, where the controller manages the flow of data between the model (business logic) and the view (presentation).
+
+RestController:
+A RestController in Spring is a specialized version of a controller that is used to build RESTful web services.
+It is specifically designed for scenarios where the client (typically a frontend application or another service) expects data in a format like JSON or XML rather than HTML.
+The methods in a RestController are annotated with @RequestMapping or @GetMapping, @PostMapping, etc., to map HTTP methods to specific functionalities.
+The data returned by a RestController is usually the raw data (like JSON) rather than a view. Spring automatically converts the data into the requested format.
+
+* which is option for hibernate
+* what is comparatore and comparable
+
+Comparable Interface:
+The Comparable it is a functional interface is part of the Java API and is in the java.lang package.
+When a class implements the Comparable interface, it means that instances (object) of that class can be compared with each other.
+The Comparable interface defines a method called compareTo(Object obj) only one object that needs to be implemented by the class. This method compares the current object with the specified object and returns a negative integer, zero, or a positive integer 
+Classes that implement Comparable can be sorted using the natural ordering imposed by the compareTo method.
+
+Comparator Interface:
+The Comparator interface is also functional interface andd part of the Java API and is in the java.util package.
+It provides a way to define custom comparison logic for objects that may not have a natural ordering or when you want to override the natural ordering.
+The Comparator interface defines a method called compare(T o1, T o2) that compares two objects for order its return a integer value.
+You can create instances of Comparator and use them to sort collections or arrays.
+
+* diff bet jdbc and hibernate
+JDBC
+-In JDBC, one needs to write code to map the object model's data representation to the schema of the relational model.
+-JDBC enables developers to create queries and update data to a relational database using the Structured Query
+Language (SQL).
+-JDBC code needs to be written in a try-catch databases block as it throws checked exceptions (SQLexception).
+-JDBC is database dependent i.e. one needs to write different codes for different database.
+-Creating associations between relations is quite hard in
+JDBC.
+-It is a database connectivity tool.
+-Lazy Loading is not supported.
+-It has low performance than Hibernate.
+-One needs to maintain explicitly database connections and transactions.
+-It has a dedicated customer support service system.
+
+Hibernate
+-maps the obiect model's data to the schema of the database itself with the help of annotations.
+-Hibernate uses HQL (Hibernate Query Language) which is similar to SQL but understands object-oriented concepts like inheritance, association etc.
+-Whereas Hibernate manages the exceptions itself by marking them as unchecked.
+-Whereas Hibernate is database-independent and the same code can work for many databases with minor changes.
+-Associations like one-to-one, one-to-many, many-to-one, and many-to-many can be acquired easily with the help of annotations.
+-It is a Java framework.
+-Lazy Loading is supported.
+-It has high performance.
+-It itself manages its own transactions.
+-Waiting time is more for any answer to an issue.
+
+* what is componant
+In the Spring Boot, a "component" typically refers to a class annotated with @Component or one of its specialized variants, such as @Service, @Repository, or @Controller. 
+These annotations are part of the Spring Framework and are used for declaring and autodetecting Spring beans.
+ A Spring bean is a Java object managed by the Spring IoC (Inversion of Control) container. 
+Components are one of the ways to define and register beans in a Spring application.
+e.g
+@Service: This annotation is used to indicate that a class is a service component. It is often used for service layer classes in a Spring application.
+@Service
+public class MyService {
+    // Class definition
+}
+
+* What is IOC
+* java 8 features
+* diff bet spring and spring boot
+* what is requestbody
+* what is pathvariable
+* diff bet jsp and html
+* diff bt primary key and uniq key
+* what is seriliazation
+* what is servlet
+* what is orm
+* file input and output
+* what is stream api
+* explore java8 features
+* anonymous class 
+* types of memory 
+* truncate and drop in mysql 
+* mapping and hql in hibernate
+* http methods 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
