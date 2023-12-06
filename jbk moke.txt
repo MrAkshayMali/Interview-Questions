@@ -123,6 +123,7 @@ public class MyService {
 * truncate and drop in mysql 
 * mapping and hql in hibernate
 * http methods 
+* methos of collections 
 
 
 
